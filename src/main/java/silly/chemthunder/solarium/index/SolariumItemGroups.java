@@ -33,5 +33,6 @@ public interface SolariumItemGroups {
         i.add(SolariumItems.SMORE);
         i.add(SolariumItems.CHOCLATE);
         i.add(SolariumItems.CELESTIAL_MAGNIFIER);
+        i.add(SolariumItems.MOON_PIE);
     }
 }

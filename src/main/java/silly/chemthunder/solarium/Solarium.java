@@ -4,9 +4,10 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import silly.chemthunder.solarium.util.LootTableModifiers;
 import silly.chemthunder.solarium.index.SolariumItemGroups;
 import silly.chemthunder.solarium.index.SolariumItems;
+import silly.chemthunder.solarium.index.SolariumStatusEffects;
+import silly.chemthunder.solarium.util.LootTableModifiers;
 
 public class Solarium implements ModInitializer {
 	public static final String MOD_ID = "solarium";
@@ -20,6 +21,7 @@ public class Solarium implements ModInitializer {
         SolariumItems.init();
         SolariumItemGroups.init();
         LootTableModifiers.init();
+        SolariumStatusEffects.init();
 
 		LOGGER.info("Hello Fabric world!");
 	}

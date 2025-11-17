@@ -23,17 +23,30 @@ public interface SolariumItems {
 
     Item SMORE = create("smore", Item::new, new Item.Settings()
             .maxCount(1)
+            .food(new FoodComponent.Builder()
+                    .nutrition((int) 5.0f)
+                    .saturationModifier(3.5f)
+                    .snack()
+                    .build()
+            )
     );
 
     Item MARSHMALLOW = create("marshmallow", Item::new, new Item.Settings()
             .maxCount(16)
+            .food(new FoodComponent.Builder()
+                    .nutrition((int) 1.0f)
+                    .saturationModifier(0.5f)
+                    .alwaysEdible()
+                    .snack()
+                    .build()
+            )
     );
 
     Item MARSHMALLOW_ON_STICK = create("marshmallow_stick", MarshmallowStickItem::new, new Item.Settings()
             .maxCount(1)
     );
 
-    Item CHOCLATE = create("choclate", Item::new, new Item.Settings()
+    Item CHOCLATE = create("chocolate", Item::new, new Item.Settings()
             .food(
                     new FoodComponent.Builder()
                             .alwaysEdible()
@@ -46,6 +59,15 @@ public interface SolariumItems {
     Item CELESTIAL_MAGNIFIER = create("celestial_magnifier", CelestialMagnefierItem::new, new Item.Settings()
             .maxCount(1)
             .fireproof()
+    );
+
+    Item MOON_PIE = create("moon_pie", Item::new, new Item.Settings()
+            .food(new FoodComponent.Builder()
+                    .nutrition((int) 2.5f)
+                    .saturationModifier(1.5f)
+                    .snack()
+                    .build()
+            )
     );
 
     static Item create(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {

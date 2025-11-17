@@ -1,3 +1,6 @@
 {
-  "itemgroup.solarium": "Solarium"
+  "itemgroup.solarium": "Solarium",
+  "text.effect.euphoria_duration": "Until damage",
+
+  "effect.solarium.euphoria": "Euphoria"
 }
