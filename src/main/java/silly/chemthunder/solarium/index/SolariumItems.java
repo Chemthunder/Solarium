@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import silly.chemthunder.solarium.Solarium;
+import silly.chemthunder.solarium.item.CelestialMagnefierItem;
 import silly.chemthunder.solarium.item.MarshmallowStickItem;
 
 import java.util.function.Function;
@@ -40,6 +41,11 @@ public interface SolariumItems {
                             .saturationModifier(1)
                             .alwaysEdible()
                             .build())
+    );
+
+    Item CELESTIAL_MAGNIFIER = create("celestial_magnifier", CelestialMagnefierItem::new, new Item.Settings()
+            .maxCount(1)
+            .fireproof()
     );
 
     static Item create(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
