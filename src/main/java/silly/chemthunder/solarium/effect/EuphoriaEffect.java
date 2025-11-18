@@ -7,4 +7,9 @@ public class EuphoriaEffect extends StatusEffect {
     public EuphoriaEffect(StatusEffectCategory category, int color) {
         super(category, color);
     }
+
+    @Override
+    public int getFadeTicks() {
+        return 60;
+    }
 }

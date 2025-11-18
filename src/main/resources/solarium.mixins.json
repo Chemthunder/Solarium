@@ -13,7 +13,6 @@
     "requireAnnotations": true
   },
   "client": [
-    "CameraMixin",
     "client.InGameHudMixin",
     "client.WorldRendererMixin"
   ]

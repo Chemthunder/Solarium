@@ -4,7 +4,6 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.client.render.RenderTickCounter;
-import org.intellij.lang.annotations.JdkConstants;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -21,8 +20,4 @@ public abstract class InGameHudMixin {
         }
     }
 
-    @Inject(method = "renderHotbar", at = @At("HEAD"), cancellable = true)
-    private void a_thingie(DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
-        // custyom gui color with euphoria
-    }
 }

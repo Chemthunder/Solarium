@@ -7,7 +7,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import silly.chemthunder.solarium.Solarium;
 import silly.chemthunder.solarium.item.CelestialMagnefierItem;
-import silly.chemthunder.solarium.item.MarshmallowStickItem;
+import silly.chemthunder.solarium.item.EuphoricFoodItem;
+import silly.chemthunder.solarium.item.EuphoricMarshmallowItem;
 
 import java.util.function.Function;
 
@@ -31,7 +32,7 @@ public interface SolariumItems {
             )
     );
 
-    Item MARSHMALLOW = create("marshmallow", Item::new, new Item.Settings()
+    Item MARSHMALLOW = create("prismallow", EuphoricMarshmallowItem::new, new Item.Settings()
             .maxCount(16)
             .food(new FoodComponent.Builder()
                     .nutrition((int) 1.0f)
@@ -42,8 +43,28 @@ public interface SolariumItems {
             )
     );
 
-    Item MARSHMALLOW_ON_STICK = create("marshmallow_stick", MarshmallowStickItem::new, new Item.Settings()
+    Item MARSHMALLOW_ON_STICK = create("prismallow_stick", EuphoricMarshmallowItem::new, new Item.Settings()
             .maxCount(1)
+
+            .food(
+                    new FoodComponent.Builder()
+                            .alwaysEdible()
+                            .nutrition(1)
+                            .saturationModifier(1.0f)
+                            .build()
+            )
+    );
+
+    Item ROASTED_MARSHMALLOW_ON_STICK = create("roasted_prismallow_stick", EuphoricMarshmallowItem::new, new Item.Settings()
+            .maxCount(1)
+
+            .food(
+                    new FoodComponent.Builder()
+                            .alwaysEdible()
+                            .nutrition(6)
+                            .saturationModifier(2.5f)
+                            .build()
+            )
     );
 
     Item CHOCLATE = create("chocolate", Item::new, new Item.Settings()
@@ -61,7 +82,7 @@ public interface SolariumItems {
             .fireproof()
     );
 
-    Item MOON_PIE = create("moon_pie", Item::new, new Item.Settings()
+    Item MOON_PIE = create("moon_pie", EuphoricFoodItem::new, new Item.Settings()
             .food(new FoodComponent.Builder()
                     .nutrition((int) 2.5f)
                     .saturationModifier(1.5f)
