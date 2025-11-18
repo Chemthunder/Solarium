@@ -22,7 +22,6 @@ public class Solarium implements ModInitializer {
         SolariumItemGroups.init();
         LootTableModifiers.init();
         SolariumStatusEffects.init();
-
-		LOGGER.info("Hello Fabric world!");
+            LOGGER.info("\uD83D\uDC00Registered main mod initalizer");
 	}
 }

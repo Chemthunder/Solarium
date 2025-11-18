@@ -12,7 +12,7 @@ public class LootTableModifiers {
 
 
 
-  public   static void init() {
+    public   static void init() {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registry) -> {
             if (LootTables.SIMPLE_DUNGEON_CHEST.equals(key)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
